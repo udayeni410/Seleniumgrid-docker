@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-09-09T12:11:22 IST" name="Suite" finished-at="2020-09-09T12:11:42 IST" duration-ms="19547">
+    <groups>
+    </groups>
+    <test started-at="2020-09-09T12:11:22 IST" name="Test" finished-at="2020-09-09T12:11:42 IST" duration-ms="19547">
+      <class name="docker.SleniumwithChrome">
+        <test-method signature="grid1()[pri:0, instance:docker.SleniumwithChrome@679cdcad]" started-at="2020-09-09T12:11:22 IST" name="grid1" finished-at="2020-09-09T12:11:33 IST" duration-ms="10351" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- grid1 -->
+      </class> <!-- docker.SleniumwithChrome -->
+      <class name="docker.Firefoxtest1">
+        <test-method signature="grid2()[pri:0, instance:docker.Firefoxtest1@87a6c185]" started-at="2020-09-09T12:11:22 IST" name="grid2" finished-at="2020-09-09T12:11:42 IST" duration-ms="19485" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- grid2 -->
+      </class> <!-- docker.Firefoxtest1 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
