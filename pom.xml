@@ -24,5 +24,7 @@
   
   </dependencies>
   
-  
+  <build>
+  <defaultGoal>install</defaultGoal>
+  </build>
 </project>
