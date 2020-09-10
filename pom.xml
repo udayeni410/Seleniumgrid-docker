@@ -3,10 +3,7 @@
   <groupId>dockermaven</groupId>
   <artifactId>dockermaven</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <properties>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
-  </properties>
+  
   
   
   <dependencies>
@@ -29,6 +26,31 @@
   </dependencies>
   
   <build>
-  <defaultGoal>install</defaultGoal>
-  </build>
+ 
+<defaultGoal>install</defaultGoal>
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-compiler-plugin</artifactId>
+<configuration>
+<source>1.7</source>
+<target>1.7</target>
+</configuration>
+</plugin>
+
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-surefire-plugin</artifactId>
+<version>2.19.1</version>
+<configuration>
+<suiteXmlFiles>
+<suiteXmlFile>testng.xml</suiteXmlFile>
+</suiteXmlFiles>
+</configuration>
+</plugin>
+</plugins>
+</build>
+  
+  
+ 
 </project>
