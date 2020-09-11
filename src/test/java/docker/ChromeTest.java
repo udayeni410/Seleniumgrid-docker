@@ -16,9 +16,9 @@ DesiredCapabilities dc=DesiredCapabilities.chrome();
 		URL url=new URL("http://localhost:4545/wd/hub");
 		
 		RemoteWebDriver driver=new RemoteWebDriver(url,dc);
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		driver.get("https://opensource-demo.orangehrmlive.com/");
-		Thread.sleep(3000);
+		Thread.sleep(10000);
 		System.out.println("title of page"+driver.getTitle());
 		driver.quit();
 		
