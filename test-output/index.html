@@ -163,8 +163,8 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+&lt;suite parallel=&quot;classes&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;classes&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;docker.FirefoxTest&quot;/&gt;
       &lt;class name=&quot;docker.ChromeTest&quot;/&gt;
@@ -211,16 +211,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'grid2')
 data.setCell(0, 2, 'docker.FirefoxTest')
-data.setCell(0, 3, 13614);
+data.setCell(0, 3, 30035);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'grid1')
 data.setCell(1, 2, 'docker.ChromeTest')
-data.setCell(1, 3, 5419);
+data.setCell(1, 3, 26208);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 19 seconds</span>
+              <span class="suite-total-time">Total running time: 56 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -256,7 +256,7 @@ return data;
               <div class="chronological-class-name">docker.ChromeTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">grid1</span>
-                <span class="method-start">13635 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
