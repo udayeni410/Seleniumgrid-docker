@@ -13,7 +13,7 @@ public class FirefoxTest {
 public static void grid2() throws MalformedURLException, InterruptedException{
 		DesiredCapabilities dc=DesiredCapabilities.firefox();
 				
-		URL url=new URL("http://localhost:4545/wd/hub");
+		URL url=new URL("http://127.0.0.1:4545/wd/hub");
 				
 		RemoteWebDriver driver=new RemoteWebDriver(url,dc);
 		Thread.sleep(10000);
