@@ -2,8 +2,10 @@ package docker;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterTest;
@@ -16,12 +18,14 @@ public class FirefoxTest {
 	
 	 @BeforeClass
 	  public void beforeClass() throws MalformedURLException {
-		 DesiredCapabilities dc=DesiredCapabilities.firefox();
+		 FirefoxOptions fop=new FirefoxOptions();
+		 //DesiredCapabilities dc=DesiredCapabilities.firefox();
+		 System.setProperty("java.net.preferIPv4Stack" , "true");
+	      
+	        URL url=new URL("http://host.docker.internal:4545/wd/hub");
 	        
-	        
-	        URL url=new URL("http://localhost:4545/wd/hub");
-	        
-	        driver=new RemoteWebDriver(url,dc);
+	        driver=new RemoteWebDriver(url,fop);
+	        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	        driver.get("https://opensource-demo.orangehrmlive.com/");
 	  }
 

@@ -3,26 +3,35 @@ package docker;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+
 public class ChromeTest {
 	RemoteWebDriver driver;
 	
 	 @BeforeClass
 	  public void beforeClass() throws MalformedURLException {
-		 DesiredCapabilities dc=DesiredCapabilities.chrome();
+		 ChromeOptions cop=new ChromeOptions();
+		// DesiredCapabilities dc=DesiredCapabilities.chrome();
 	        
+		 System.setProperty("java.net.preferIPv4Stack" , "true");
+	        URL url=new URL("http://host.docker.internal:4545/wd/hub");
 	        
-	        URL url=new URL("http://localhost:4545/wd/hub");
+	  
+	        driver=new RemoteWebDriver(url,cop);
+	        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	        
-	        driver=new RemoteWebDriver(url,dc);
 	        driver.get("https://opensource-demo.orangehrmlive.com/");
 	  }
 
