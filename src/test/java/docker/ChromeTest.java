@@ -12,6 +12,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -32,7 +33,7 @@ public class ChromeTest {
 	        driver=new RemoteWebDriver(url,cop);
 	        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	        
-	        driver.get("https://opensource-demo.orangehrmlive.com/");
+	        driver.get("https://s2.demo.opensourcecms.com/orangehrm/symfony/web/index.php/auth/login");
 	  }
 
  @Test
@@ -41,32 +42,32 @@ public class ChromeTest {
  }
  @Test
  public void f2() {
-	  driver.findElement(By.id("txtUsername")).sendKeys("Admin");
-		 driver.findElement(By.id("txtPassword")).sendKeys("admin123");
-		 driver.findElement(By.id("btnLogin")).click();
-	  List<WebElement> links = driver.findElements(By.tagName("a"));
-	  
-	  System.out.println(links.size());
-	  
-	  for (int i = 1; i<links.size(); i=i+1)
-	  
-	  {
-	  
-	  System.out.println(links.get(i).getText());
-	  
-	  }
+     driver.findElement(By.id("txtUsername")).sendKeys("opensourcecms");
+        driver.findElement(By.id("txtPassword")).sendKeys("opensourcecms");
+        driver.findElement(By.id("btnLogin")).click();
+     List<WebElement> links = driver.findElements(By.tagName("a"));
+     
+     System.out.println(links.size());
+     
+     for (int i = 1; i<links.size(); i=i+1)
+     
+     {
+     
+     System.out.println(links.get(i).getText());
+     
+     }
  }
  @Test
  public void f3() {
-	  driver.findElement(By.id("welcome")).click();
-	  driver.findElement(By.id("aboutDisplayLink")).click();
-	  String msg=driver.findElement(By.tagName("body")).getText();
-	  System.out.println(msg);
-	  
+     String txt="Welcome Admin";
+     String txt1=driver.findElement(By.xpath("//*[@id=\"option-menu\"]/li[1]")).getText();
+     Assert.assertEquals(txt, txt1);
+         
+     
  }
 
  @AfterTest
  public void afterTest() {
-	  driver.quit();
+     driver.quit();
  }
 }
