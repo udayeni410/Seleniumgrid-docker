@@ -1,0 +1,4 @@
+mvn clean test -DsuiteXmlFile=testng.xml
+mvn clean test -DsuiteXmlFile=testngfirefox.xml
+docker build -f DockerfileChrome .
+docker build -f DockerfileFirefox .
