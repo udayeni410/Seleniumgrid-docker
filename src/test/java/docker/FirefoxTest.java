@@ -1,5 +1,7 @@
 package docker;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -22,7 +24,7 @@ public class FirefoxTest {
 		 //DesiredCapabilities dc=DesiredCapabilities.firefox();
 		 System.setProperty("java.net.preferIPv4Stack" , "true");
 	      
-	        URL url=new URL("http://host.docker.internal:4545/wd/hub");
+	        URL url=new URL("http://host.docker.internal:4444/wd/hub");
 	        
 	        driver=new RemoteWebDriver(url,fop);
 	        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);

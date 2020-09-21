@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="classes" name="Test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="docker.FirefoxTest">
-        <methods>
-          <include name="afterTest"/>
-          <include name="f2"/>
-          <include name="f3"/>
-          <include name="f"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- docker.FirefoxTest -->
       <class name="docker.ChromeTest">
         <methods>
           <include name="f2"/>

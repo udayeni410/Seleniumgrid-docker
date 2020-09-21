@@ -1,5 +1,8 @@
 package docker;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
@@ -27,7 +30,7 @@ public class ChromeTest {
 		// DesiredCapabilities dc=DesiredCapabilities.chrome();
 	        
 		 System.setProperty("java.net.preferIPv4Stack" , "true");
-	        URL url=new URL("http://host.docker.internal:4545/wd/hub");
+	        URL url=new URL("http://host.docker.internal:4445/wd/hub");
 	        
 	  
 	        driver=new RemoteWebDriver(url,cop);
@@ -61,7 +64,7 @@ public class ChromeTest {
  public void f3() {
      String txt="Welcome Admin";
      String txt1=driver.findElement(By.xpath("//*[@id=\"option-menu\"]/li[1]")).getText();
-     Assert.assertEquals(txt, txt1);
+     AssertJUnit.assertEquals(txt, txt1);
          
      
  }

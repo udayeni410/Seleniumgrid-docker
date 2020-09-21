@@ -3,7 +3,7 @@
   <groupId>dockermaven</groupId>
   <artifactId>dockermaven</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
+  <packaging>jar</packaging>
   
   
   <dependencies>
@@ -22,18 +22,15 @@
     <scope>test</scope>
 </dependency>
   
-  <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-clean-plugin -->
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-clean-plugin</artifactId>
-    <version>3.1.0</version>
-</dependency>
+  
   
   </dependencies>
   
   <build>
  
 <defaultGoal>install</defaultGoal>
+
+
 <plugins>
 <plugin>
 <groupId>org.apache.maven.plugins</groupId>
@@ -45,20 +42,36 @@
 </configuration>
 </plugin>
 
+
+
 <plugin>
-<groupId>org.apache.maven.plugins</groupId>
-<artifactId>maven-surefire-plugin</artifactId>
-<version>2.19.1</version>
-<configuration>
-<useSystemClassLoader>false</useSystemClassLoader>
-<suiteXmlFiles>
-<suiteXmlFile>testng.xml</suiteXmlFile>
+      <!-- Build an executable JAR -->
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <version>3.1.0</version>
+      <configuration>
+        <archive>
+          <manifest>
+            <addClasspath>true</addClasspath>
+            <classpathPrefix>lib/</classpathPrefix>
+            <mainClass>runner.TestngRunnerChrome</mainClass>
+          </manifest>
+        </archive>
+      </configuration>
+    </plugin> 
+
+<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-surefire-plugin</artifactId>
+	<version>2.19.1</version>
+		<configuration>
+		<useSystemClassLoader>false</useSystemClassLoader>
+			<suiteXmlFiles>
+ <!-- Need to pass testng.xml files as argument from command line -->
+	<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
 </suiteXmlFiles>
-</configuration>
+		</configuration>
 </plugin>
-
-
-
       
 </plugins>
 </build>
