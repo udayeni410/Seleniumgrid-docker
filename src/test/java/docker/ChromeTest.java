@@ -27,12 +27,10 @@ public class ChromeTest {
 	 @BeforeClass
 	  public void beforeClass() throws MalformedURLException {
 		 ChromeOptions cop=new ChromeOptions();
-		// DesiredCapabilities dc=DesiredCapabilities.chrome();
+		
 	        
 		 System.setProperty("java.net.preferIPv4Stack" , "true");
 	        URL url=new URL("http://host.docker.internal:4445/wd/hub");
-	        
-	  
 	        driver=new RemoteWebDriver(url,cop);
 	        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	        
