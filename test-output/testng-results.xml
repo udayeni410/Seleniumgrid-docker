@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-09-21T15:31:08 IST" name="Suite" finished-at="2020-09-21T15:31:29 IST" duration-ms="21346">
+  <suite started-at="2020-09-24T14:06:26 IST" name="Suite" finished-at="2020-09-24T14:06:42 IST" duration-ms="15742">
     <groups>
     </groups>
-    <test started-at="2020-09-21T15:31:08 IST" name="Test" finished-at="2020-09-21T15:31:29 IST" duration-ms="21346">
-      <class name="docker.FirefoxTest">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:docker.FirefoxTest@d4c91171]" started-at="2020-09-21T15:31:08 IST" name="beforeClass" finished-at="2020-09-21T15:31:19 IST" duration-ms="11586" status="PASS">
+    <test started-at="2020-09-24T14:06:26 IST" name="Test" finished-at="2020-09-24T14:06:42 IST" duration-ms="15742">
+      <class name="docker.ChromeTestsecond">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:docker.ChromeTestsecond@808cbc56]" started-at="2020-09-24T14:06:27 IST" name="beforeClass" finished-at="2020-09-24T14:06:34 IST" duration-ms="7919" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="f()[pri:0, instance:docker.FirefoxTest@d4c91171]" started-at="2020-09-21T15:31:19 IST" name="f" finished-at="2020-09-21T15:31:19 IST" duration-ms="33" status="PASS">
+        <test-method signature="f()[pri:0, instance:docker.ChromeTestsecond@808cbc56]" started-at="2020-09-24T14:06:34 IST" name="f" finished-at="2020-09-24T14:06:34 IST" duration-ms="25" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method signature="f2()[pri:0, instance:docker.FirefoxTest@d4c91171]" started-at="2020-09-21T15:31:19 IST" name="f2" finished-at="2020-09-21T15:31:25 IST" duration-ms="6177" status="PASS">
+        <test-method signature="f2()[pri:0, instance:docker.ChromeTestsecond@808cbc56]" started-at="2020-09-24T14:06:34 IST" name="f2" finished-at="2020-09-24T14:06:41 IST" duration-ms="6324" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f2 -->
-        <test-method signature="f3()[pri:0, instance:docker.FirefoxTest@d4c91171]" started-at="2020-09-21T15:31:25 IST" name="f3" finished-at="2020-09-21T15:31:28 IST" duration-ms="2558" status="PASS">
+        <test-method signature="f3()[pri:0, instance:docker.ChromeTestsecond@808cbc56]" started-at="2020-09-24T14:06:41 IST" name="f3" finished-at="2020-09-24T14:06:42 IST" duration-ms="1343" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f3 -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:docker.FirefoxTest@d4c91171]" started-at="2020-09-21T15:31:28 IST" name="afterTest" finished-at="2020-09-21T15:31:29 IST" duration-ms="907" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:docker.ChromeTestsecond@808cbc56]" started-at="2020-09-24T14:06:42 IST" name="afterTest" finished-at="2020-09-24T14:06:42 IST" duration-ms="69" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- docker.FirefoxTest -->
+      </class> <!-- docker.ChromeTestsecond -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
