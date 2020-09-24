@@ -1,0 +1,30 @@
+# To execute this docker-compose yml file use `docker-compose -f docker-composechrome.yml up`
+# Add the `-d` flag at the end for detached execution
+# To stop the execution, hit Ctrl+C, and then `docker-compose -f docker-composechrome.yml down`
+version: '2'
+services:
+  chrome:
+    image: selenium/standalone-chrome:latest
+    volumes:
+      - /dev/shm:/dev/shm
+    ports:
+      - "4445:4444"
+      
+  chrome:
+    image: selenium/standalone-chrome:latest
+    volumes:
+      - /dev/shm:/dev/shm
+    ports:
+      - "4444:4444"
+  imageone:
+    image: rahulheric/dockerimgone:latest
+    volumes:
+      - /dev/shm:/dev/shm
+    ports:
+      - "3690:3690"
+  imagetwo:
+    image: rahulheric/dockerimgtwo:latest
+    volumes:
+      - /dev/shm:/dev/shm
+    ports:
+      - "3680:3680"

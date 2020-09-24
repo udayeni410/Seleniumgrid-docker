@@ -1,27 +1,24 @@
 package docker;
 
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class FirefoxTest {
-
+public class ChromeTestsecond {
 	RemoteWebDriver driver;
 	
 	 @BeforeClass
 	  public void beforeClass() throws MalformedURLException {
-		 FirefoxOptions fop=new FirefoxOptions();
-		 //DesiredCapabilities dc=DesiredCapabilities.firefox();
+		 ChromeOptions fop=new ChromeOptions();
+		 
 		 System.setProperty("java.net.preferIPv4Stack" , "true");
 	      
 	        URL url=new URL("http://host.docker.internal:4444/wd/hub");
