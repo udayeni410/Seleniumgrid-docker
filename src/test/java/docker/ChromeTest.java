@@ -48,7 +48,7 @@ public class ChromeTest {
         driver.findElement(By.id("btnLogin")).click();
      List<WebElement> links = driver.findElements(By.tagName("a"));
      
-     System.out.println(links.size());
+     System.out.println("links"+links.size());
      
      for (int i = 1; i<links.size(); i=i+1)
      
